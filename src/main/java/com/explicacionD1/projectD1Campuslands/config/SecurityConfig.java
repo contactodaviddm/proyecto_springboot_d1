@@ -47,6 +47,7 @@ public class SecurityConfig {
                         // Permito acceso libre al login.
                         // Si lo protegiera, el usuario necesitaría token para obtener token.
                         .requestMatchers("/auth/login").permitAll()
+                        .requestMatchers("/api/detalle").permitAll()
                         .requestMatchers("/swagger-ui/**", "/swagger-ui.html","/v3/api-docs/**").permitAll()
                         //Esta me permite acceso OPTIONS, desde el frotend, evitando el CORS
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
